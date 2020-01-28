@@ -1,0 +1,53 @@
+%rect {
+  width: 100px;
+  height: 100px;
+}
+
+.rect-animation {
+  @extend %rect;
+  margin: 10px 20px;
+  background-color: rgb(139, 74, 74);
+  animation-name: animate-tanuki;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animate-tanuki {
+  10%,
+  80% {
+    background-color: #e24329;
+  }
+
+  20%,
+  90% {
+    background-color: #f1a699;
+  }
+}
+
+.container {
+  margin: 10px 20px;
+  position: relative;
+  .rect-transition {
+    @extend %rect;
+    position: absolute;
+
+    // background transition
+    background-color: rgb(74, 139, 88);
+    transition-property: background-color;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+    &:hover {
+      background-color: rgb(43, 161, 68);
+      cursor: pointer;
+    }
+
+    // left transition with js
+    left: 0;
+    transition: left 3s ease 0.5s;
+    &-on {
+      left: 500px;
+    }
+  }
+}

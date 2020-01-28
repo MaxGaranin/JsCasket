@@ -1,0 +1,70 @@
+.rect-animation, .container .rect-transition {
+  width: 100px;
+  height: 100px;
+}
+
+.rect-animation {
+  margin: 10px 20px;
+  background-color: #8b4a4a;
+  -webkit-animation-name: animate-tanuki;
+          animation-name: animate-tanuki;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animate-tanuki {
+  10%,
+  80% {
+    background-color: #e24329;
+  }
+  20%,
+  90% {
+    background-color: #f1a699;
+  }
+}
+
+@keyframes animate-tanuki {
+  10%,
+  80% {
+    background-color: #e24329;
+  }
+  20%,
+  90% {
+    background-color: #f1a699;
+  }
+}
+
+.container {
+  margin: 10px 20px;
+  position: relative;
+}
+
+.container .rect-transition {
+  position: absolute;
+  background-color: #4a8b58;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  left: 0;
+  -webkit-transition: left 3s ease 0.5s;
+  transition: left 3s ease 0.5s;
+}
+
+.container .rect-transition:hover {
+  background-color: #2ba144;
+  cursor: pointer;
+}
+
+.container .rect-transition-on {
+  left: 500px;
+}
+/*# sourceMappingURL=style.css.map */
