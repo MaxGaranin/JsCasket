@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Firebase authentification</title>
+  </head>
+  <body>
+    <div class="authPanel">
+      <label>
+        Электронная почта
+        <input type="text" id="email" />
+      </label>
+      <br/>
+      <label>
+        Пароль
+        <input type="password" id="password" />
+      </label>
+      <br/>
+      <button id="authBtn">Войти</button>
+    </div>
+
+    <div class="addQuestionPanel">
+      <label>
+        Введите вопрос
+        <input type="text" id="questionText" />
+      </label>
+      <button id="addQuestionBtn">Отправить</button>
+    </div>
+
+    <div class="questionsPanel">
+      <button id="readQuestionsBtn">Прочитать</button>
+      <ul id="questionsList">
+      </ul>
+    </div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
