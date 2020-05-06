@@ -9,3 +9,5 @@ console.log(copy2);
 console.log(copy);
 console.log(arr);
 
+const arr2 = [];
+console.log(arr2.pop());
